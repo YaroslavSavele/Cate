@@ -1,0 +1,370 @@
+@import "_nullstyle";
+
+body {
+   background-color: #fffefd;
+   color: #1a212f;
+}
+
+.wrapper {
+   width: 1170px;
+   margin: 0 auto;
+}
+
+.button {
+   transition: 0.2s linear;
+
+   &:hover {
+      transform: scale(1.1);
+   }
+}
+
+.container {
+   width: 1366px;
+   margin: 0 auto;
+}
+
+.site-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   .nav-list {
+      display: flex;
+      justify-content: space-between;
+      .item {
+         margin-left: 26px;
+         font-family: "Lato", sans-serif;
+         font-size: 16px;
+         line-height: 19px;
+         font-weight: 600;
+         &:first-child {
+            margin-left: 0;
+         }
+         &:hover a {
+            color: #fda553;
+            text-decoration: underline;
+         }
+         a {
+            color: #1a212f;
+         }
+      }
+   }
+}
+
+.hero-section {
+   height: 504px;
+   width: 1366px;
+   margin: 12px auto 0 auto;
+   background-color: #fda553;
+   background: url(../img/Mask.png), url(../img/cat.jpg) no-repeat no-repeat;
+   background-position: 50% 100%;
+
+   .container {
+      padding-top: 149px;
+      padding-left: 198px;
+
+      .location {
+         font-family: "Lato", sans-serif;
+         font-size: 14px;
+         line-height: 17px;
+         font-weight: 400;
+         margin-bottom: 2px;
+      }
+      .title {
+         font-family: "Rubic", sans-serif;
+         font-size: 62px;
+         line-height: 57px;
+         font-weight: 900;
+         letter-spacing: -3px;
+         margin-bottom: 17px;
+      }
+      .subtitle {
+         font-family: "Lato", sans-serif;
+         font-size: 20px;
+         line-height: 24px;
+         font-weight: 500;
+         letter-spacing: 0.5px;
+         margin-bottom: 35px;
+      }
+      .button--white {
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         width: 206px;
+         height: 50px;
+         background-color: #fffefd;
+         font-family: "Lato", sans-serif;
+         font-size: 16px;
+         line-height: 20px;
+         font-weight: 600;
+         border-radius: 30px;
+         text-align: center;
+         span {
+            margin: 0 5px 0 24px;
+            letter-spacing: -0.75px;
+         }
+      }
+   }
+}
+
+//Features style start===============================
+
+.features-section {
+   .container {
+      background: url(../img/paw-print.png) no-repeat 100% -6%;
+      text-align: center;
+   }
+
+   .title {
+      padding-top: 130px;
+      font-family: "Rubic", sans-serif;
+      font-size: 36px;
+      line-height: 43px;
+      font-weight: 800;
+      letter-spacing: -3px;
+      margin-bottom: 70px;
+   }
+
+   .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 22px;
+      column-gap: 30px;
+
+      .item {
+         width: 370px;
+         display: flex;
+         flex-direction: column;
+         justify-self: start;
+         align-items: flex-start;
+         padding: 22px 0 30px 30px;
+         background-color: #ffffff;
+         border-radius: 8px;
+         box-shadow: 0 0 10px 10px #faf9f8;
+
+         .item-img {
+            margin-bottom: 27px;
+         }
+         .item-title {
+            margin-bottom: 8px;
+            font-family: "Rubic", sans-serif;
+            font-size: 22px;
+            line-height: 31px;
+            font-weight: 700;
+         }
+         .item-discription {
+            width: 291px;
+            text-align: left;
+            font-family: "Lato", sans-serif;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+         }
+      }
+   }
+}
+//Rooms style start===============================
+.rooms-section {
+   .container {
+      background: url(../img/fish.png) no-repeat 0% 143px;
+      text-align: center;
+   }
+   .title {
+      padding-top: 125px;
+      font-family: "Rubic", sans-serif;
+      font-size: 36px;
+      line-height: 43px;
+      font-weight: 800;
+      letter-spacing: -3px;
+      margin-bottom: 61px;
+   }
+   .slider {
+      height: 490px;
+      text-align: left;
+      position: relative;
+
+      .slider__item {
+         margin-left: 168px;
+         position: relative;
+      }
+
+      .slick-arrow {
+         position: absolute;
+         bottom: 7px;
+         z-index: 5;
+         font-size: 0;
+         width: 36px;
+         height: 36px;
+         border-radius: 50%;
+         background-color: #ffffff;
+         box-shadow: 0 0 10px 10px #faf9f8;
+      }
+      .slick-arrow.slick-prev {
+         right: 215px;
+         background: url(../img/svg/arrow-left.svg) no-repeat center;
+      }
+      .slick-arrow.slick-next {
+         right: 167px;
+         background: url(../img/svg/arrow-right.svg) no-repeat center;
+      }
+
+      .slick-dots {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-top: 50px;
+
+         li {
+            list-style: none;
+            margin: 0 6px;
+         }
+         button {
+            font-size: 0;
+            width: 12px;
+            height: 12px;
+            background-color: #e1e1e1;
+            border-radius: 50%;
+         }
+         li.slick-active button {
+            background-color: #fac663;
+         }
+      }
+   }
+}
+
+.slider__item-img {
+   z-index: 1;
+   position: relative;
+}
+.slider__item-card {
+   width: 500px;
+   height: 284px;
+   background-color: #ffffff;
+   border-radius: 8px;
+   box-shadow: 77px 0 10px 10px #faf9f8;
+   position: absolute;
+   top: 15%;
+   left: 44.3%;
+   z-index: 3;
+   padding: 29px 0 0 99px;
+
+   .card__title {
+      font-family: "Rubic", sans-serif;
+      font-size: 22px;
+      line-height: 36px;
+      font-weight: 700;
+      margin-bottom: 16px;
+   }
+
+   .card__list li {
+      padding-left: 1px;
+      font-family: "Lato", sans-serif;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 400;
+      list-style-image: url(../img/svg/circle.svg);
+      list-style-position: inside;
+      margin-bottom: 14px;
+   }
+
+   .button--orange {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 206px;
+      height: 50px;
+      background-color: #ff7236;
+      font-family: "Lato", sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 600;
+      color: #fffefd;
+      border-radius: 30px;
+      text-align: center;
+      margin-top: 27px;
+      margin-left: 1px;
+      span {
+         margin: 0 5px 0 24px;
+         letter-spacing: -0.75px;
+      }
+   }
+}
+
+// Slick-Slayder+++++++++
+
+.slick-list {
+   overflow: hidden;
+}
+.slick-track {
+   display: flex;
+}
+//Reviews style start===============================
+
+.reviews-section {
+   .container {
+      background: url(../img/paw-bottom.png) no-repeat 100% -44px;
+      text-align: center;
+   }
+   .title {
+      padding-top: 122px;
+      font-family: "Rubic", sans-serif;
+      font-size: 36px;
+      line-height: 43px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      margin-bottom: 61px;
+   }
+}
+.container {
+}
+.title {
+}
+.reviews__slider {
+   padding-left: 100px;
+}
+.reviews__slider-item {
+   width: 470px;
+   text-align: left;
+   font-family: "Lato", sans-serif;
+   background-color: #ffffff;
+   border-radius: 8px;
+   box-shadow: 0 0 10px 10px #faf9f8;
+   padding-bottom: 2px;
+
+
+   .review {
+      padding: 33px 38px 5px 68px;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 500;
+      letter-spacing: 0px;
+      margin-bottom: 10px;
+      position: relative;
+
+      &::before {
+         content: '';
+         width: 27px;
+         height: 35px;
+         background: url(../img/“.png) no-repeat;
+         position: absolute;
+         top: 37px;
+         left: 36px;
+      }
+   }
+   .signature {
+      display: flex;
+      justify-content: space-between;
+      width: 362px;
+      margin: 0 33px 30px 68px;
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 400;
+      color: #848484;
+   }
+}
+
+.name {
+}
+.data {
+}
