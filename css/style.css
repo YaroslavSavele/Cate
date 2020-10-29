@@ -97,6 +97,13 @@ body {
   margin: 0 auto;
 }
 
+.title {
+  font-family: "Rubic", sans-serif;
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 800;
+}
+
 .site-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,10 +218,6 @@ body {
 
 .features-section .title {
   padding-top: 130px;
-  font-family: "Rubic", sans-serif;
-  font-size: 36px;
-  line-height: 43px;
-  font-weight: 800;
   letter-spacing: -3px;
   margin-bottom: 70px;
 }
@@ -280,10 +283,6 @@ body {
 
 .rooms-section .title {
   padding-top: 125px;
-  font-family: "Rubic", sans-serif;
-  font-size: 36px;
-  line-height: 43px;
-  font-weight: 800;
   letter-spacing: -3px;
   margin-bottom: 61px;
 }
@@ -439,10 +438,6 @@ body {
 
 .reviews-section .title {
   padding-top: 122px;
-  font-family: "Rubic", sans-serif;
-  font-size: 36px;
-  line-height: 43px;
-  font-weight: 800;
   letter-spacing: -2px;
   margin-bottom: 61px;
 }
@@ -529,7 +524,7 @@ body {
 }
 
 .reviews__slider-item .review::before {
-  content: '';
+  content: "";
   width: 27px;
   height: 35px;
   background: url(../img/“.png) no-repeat;
@@ -551,4 +546,59 @@ body {
   line-height: 17px;
   font-weight: 400;
   color: #848484;
+}
+
+.contacts-section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 103px;
+  background-color: #fac663;
+}
+
+.contacts-section .container .contacts__aside {
+  margin-left: 198px;
+}
+
+.contacts-section .container .contacts__aside .title {
+  margin-top: 59px;
+  letter-spacing: -2.6px;
+  margin-bottom: 39px;
+}
+
+.contacts-section .container .contacts__aside .contacts_aside-item {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 26px;
+}
+
+.contacts-section .container .contacts__aside .contacts_aside-item h4 {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.contacts-section .container .contacts__aside .contacts_aside-item p {
+  font-weight: 400;
+}
+
+.contacts-section .container .contacts__aside .contacts_aside-item .social {
+  margin-top: 13px;
+}
+
+.contacts-section .container .contacts__aside .contacts_aside-item .social .social-link {
+  margin-right: 17px;
+}
+
+.contacts-section .container .contacts__map {
+  position: relative;
+}
+
+.contacts-section .container .contacts__map .cat {
+  position: absolute;
+  top: 236px;
+  left: 248px;
 }

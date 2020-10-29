@@ -1,5 +1,6 @@
 @import "_nullstyle";
 
+//General style start===============================
 body {
    background-color: #fffefd;
    color: #1a212f;
@@ -23,6 +24,14 @@ body {
    margin: 0 auto;
 }
 
+.title {
+   font-family: "Rubic", sans-serif;
+   font-size: 36px;
+   line-height: 43px;
+   font-weight: 800;
+}
+
+//Header style start===============================
 .site-header {
    display: flex;
    justify-content: space-between;
@@ -116,10 +125,6 @@ body {
 
    .title {
       padding-top: 130px;
-      font-family: "Rubic", sans-serif;
-      font-size: 36px;
-      line-height: 43px;
-      font-weight: 800;
       letter-spacing: -3px;
       margin-bottom: 70px;
    }
@@ -172,10 +177,6 @@ body {
    }
    .title {
       padding-top: 125px;
-      font-family: "Rubic", sans-serif;
-      font-size: 36px;
-      line-height: 43px;
-      font-weight: 800;
       letter-spacing: -3px;
       margin-bottom: 61px;
    }
@@ -309,20 +310,12 @@ body {
    }
    .title {
       padding-top: 122px;
-      font-family: "Rubic", sans-serif;
-      font-size: 36px;
-      line-height: 43px;
-      font-weight: 800;
       letter-spacing: -2px;
       margin-bottom: 61px;
    }
 }
-.container {
-}
-.title {
-}
+
 .reviews__slider {
-   //min-width: 0;
    padding-left: 100px;
    position: relative;
 
@@ -379,7 +372,6 @@ body {
    padding-bottom: 2px;
    margin-right: 30px;
 
-
    .review {
       padding: 33px 38px 5px 68px;
       font-size: 16px;
@@ -390,7 +382,7 @@ body {
       position: relative;
 
       &::before {
-         content: '';
+         content: "";
          width: 27px;
          height: 35px;
          background: url(../img/“.png) no-repeat;
@@ -409,7 +401,61 @@ body {
       font-weight: 400;
       color: #848484;
    }
-
-
 }
+
+//Contact style start===============================
+.contacts-section {
+   .container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 103px;
+      background-color: #fac663;
+
+      .contacts__aside {
+         margin-left: 198px;
+
+         .title {
+            margin-top: 59px;
+            letter-spacing: -2.6px;
+            margin-bottom: 39px;
+         }
+
+         .contacts_aside-item {
+            font-family: "Lato", sans-serif;
+               font-size: 16px;
+               line-height: 19px;
+               margin-bottom: 26px;
+           
+               h4 {
+               margin-bottom: 10px;
+               font-weight: 700;
+            }
+
+            p {
+               font-weight: 400;
+            }
+
+            .social {
+               margin-top: 13px;
+               .social-link {
+                  margin-right: 17px;
+}
+}
+         }
+      }
+
+      .contacts__map {
+         position: relative;
+
+         .cat {
+            position: absolute;
+            top: 236px;
+            left: 248px;
+         }
+      }
+   }
+}
+
+
+
 
