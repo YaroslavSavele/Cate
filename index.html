@@ -20,10 +20,10 @@
          </div>
          <nav class="nav">
             <ul class="nav-list">
-               <li class="item"><a href="#">Почему мы?</a></li>
+               <li class="item"><a href="#features-section">Почему мы?</a></li>
                <li class="item"><a href="#">Номера</a></li>
-               <li class="item"><a href="#">Отзывы</a></li>
-               <li class="item"><a href="#">Как нас найти</a></li>
+               <li class="item"><a href="#reviews-section">Отзывы</a></li>
+               <li class="item"><a href="#contacts-section">Как нас найти</a></li>
             </ul>
          </nav>
       </header>
@@ -34,10 +34,10 @@
             <p class="location">Санкт-Петербург</p>
             <h1 class="title">Котейка</h1>
             <p class="subtitle">Уютная гостиница для котов и кошек</p>
-            <button class="button button--white"><span>Забронировать</span> <img src="img/paw.png" alt=""></button>
+            <a href="#popup" class="button button--white"><span>Забронировать</span> <img src="img/paw.png" alt=""></a>
          </div>
       </section>
-      <section class="features-section">
+      <section class="features-section" id="features-section">
          <div class="container">
             <div class="wrapper">
                <h2 class="title">Почему мы?</h2>
@@ -128,7 +128,7 @@
          </div>
       </section>
 
-      <section class="reviews-section">
+      <section class="reviews-section" id="reviews-section">
          <div class="container">
             <h2 class="title">Отзывы</h2>
             <div class="reviews__slider">
@@ -177,28 +177,28 @@
          </div>
       </section>
 
-      <section class="contacts-section">
+      <section class="contacts-section" id="contacts-section">
          <div class="container">
             <div class="contacts__aside">
                <h2 class="title">Как нас найти</h2>
-               <div class="contacts_aside-item">
+               <div class="contacts__aside-item">
                   <h4>Адрес</h4>
                   <p>Санкт-Петербург,<br>
                      ул Большая Конюшенная, д 19</p>
                </div>
-               <div class="contacts_aside-item">
+               <div class="contacts__aside-item">
                   <h4>Режим работы</h4>
                   <p>Ежедневно, с 9:00 до 20:00</p>
                </div>
-               <div class="contacts_aside-item">
+               <div class="contacts__aside-item">
                   <h4>Телефон</h4>
                   <p>8 (800) 333-55-99</p>
                </div>
-               <div class="contacts_aside-item">
+               <div class="contacts__aside-item">
                   <h4>E-mail</h4>
                   <p>info@cat-hotel.ru</p>
                </div>
-               <div class="contacts_aside-item">
+               <div class="contacts__aside-item">
                   <h4>Социальные сети</h4>
                   <div class="social">
                      <a href="#!" class="social-link"><img src="img/svg/icon-fb.svg" alt=""></a>
@@ -224,10 +224,10 @@
 
             <nav class="nav">
                <ul class="nav-list">
-                  <li class="item"><a href="#">Почему мы?</a></li>
+                  <li class="item"><a href="#features-section">Почему мы?</a></li>
                   <li class="item"><a href="#">Номера</a></li>
-                  <li class="item"><a href="#">Отзывы</a></li>
-                  <li class="item"><a href="#">Как нас найти</a></li>
+                  <li class="item"><a href="#reviews-section">Отзывы</a></li>
+                  <li class="item"><a href="#contacts-section">Как нас найти</a></li>
                </ul>
             </nav>
          </div>
@@ -246,6 +246,40 @@
          </div>
       </div>
    </footer>
+
+   <div class="popup" id="popup">
+      <div class="popup__body">
+         <div class="popup__content">
+            <div class="popup__bg"><img src="./img/paw-book.png" alt=""></div>
+            <a href="#" class="popup__close"><img src="./img/svg/close-popup.svg" alt="Close"></a>
+            <h2 class="popup__title title">Забронировать номер</h2>
+            <form action="#" id="form" class="popup__form">
+               <div class="form__item">
+                  <input type="text" autocomplete="on" placeholder="Ваше имя" class="form__input">
+               </div>
+               <div class="form__item">
+                  <input type="text" autocomplete="on" placeholder="Имя Питомца" class="form__input">
+               </div>
+               <div class="form__item">
+                  <input type="tel" autocomplete="on" placeholder="Телефон" class="form__input">
+               </div>
+               <div class="form__item">
+                  <input type="email" autocomplete="on" placeholder="E-mail" class="form__input">
+               </div>
+               <div class="form__item form__item--date">
+                  <span>Дата заезда</span>
+                  <label for="" class="label">с<input type="text" placeholder="20.11.2020" class="form__input form__input--date"></label>
+                  <label for="" class="label">по<input type="text" placeholder="27.11.2020" class="form__input form__input--date"></label>
+               </div>
+               <button type="submit" class="button button--orange"><span>Отправить заявку</span> <img src="img/paw-orange.png"
+                  alt=""></button>
+                  
+               
+               
+            </form>
+         </div>
+      </div>
+   </div>
 
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
    <script src="js/slick.min.js"></script>
