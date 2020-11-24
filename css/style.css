@@ -726,6 +726,8 @@ body {
   visibility: hidden;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 .popup .popup__body {
@@ -742,9 +744,15 @@ body {
   padding: 30px 10px;
 }
 
-.popup:target {
+.popup.open {
   opacity: 1;
   visibility: visible;
+}
+
+.popup.open .popup__content {
+  opacity: 1;
+  -webkit-transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+          transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
 }
 
 .popup__content {
@@ -756,6 +764,11 @@ body {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+          transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
 }
 
 .popup__content .popup__title {
