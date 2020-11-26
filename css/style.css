@@ -77,6 +77,10 @@ body {
   color: #1a212f;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .wrapper {
   width: 1170px;
   margin: 0 auto;

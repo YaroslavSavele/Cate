@@ -4,6 +4,9 @@
 body {
    background-color: #fffefd;
    color: #1a212f;
+   &.lock {
+      overflow: hidden;
+   }
 }
 
 .wrapper {
@@ -668,8 +671,3 @@ body {
 }
 }
 
-.form__item---data {
-}
-
-.button--orange {
-}

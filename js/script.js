@@ -16,6 +16,8 @@ $(document).ready(function(){
 const popupLinks = document.querySelectorAll('.popup-link');
 const popup = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
+const bodyCat = document.querySelector('body');
+
 
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
@@ -27,10 +29,12 @@ const timeout = 800;
 popupLinks.forEach((link) => {
    link.addEventListener('click', function() {
       popup.classList.add('open');
+      bodyCat.classList.add('lock');
    });
 });
 
 popupClose.addEventListener('click', function (e) {
    e.preventDefault();
    popup.classList.remove('open');
+   bodyCat.classList.remove('lock');
 });
