@@ -48,7 +48,7 @@ body {
    color: #fffefd;
    border-radius: 30px;
    text-align: center;
-  
+
    span {
       margin: 0 5px 0 24px;
       letter-spacing: -0.75px;
@@ -134,7 +134,7 @@ body {
          span {
             margin: 0 5px 0 24px;
             letter-spacing: -0.75px;
-            color: #1A212F;
+            color: #1a212f;
          }
       }
    }
@@ -549,6 +549,7 @@ body {
    background-color: rgba(255, 255, 255, 0.9);
    top: 0;
    left: 0;
+   z-index: 5;
 
    opacity: 0;
    visibility: hidden;
@@ -559,6 +560,7 @@ body {
    .popup__body {
       min-height: 100%;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 30px 10px;
@@ -572,11 +574,25 @@ body {
          transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
       }
    }
+
+   &.open--after {
+      opacity: 1;
+      visibility: visible;
+      .popup__content {
+         opacity: 0;
+         transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+      }
+      .popup__after {
+         opacity: 1;
+         transform: perspective(600px) translate(0px, -200%) rotateX(0deg);
+      }
+   }
 }
 
 .popup__content {
    width: 570px;
    height: 649px;
+   margin-bottom: 27px;
 
    background-color: #fffefd;
    box-shadow: 0 0 10px 10px #efe8e2;
@@ -639,7 +655,6 @@ body {
             line-height: 19px;
             color: #1a212f;
          }
-         
       }
    }
    .form__input {
@@ -653,7 +668,7 @@ body {
       font-weight: 400;
       font-size: 18px;
       line-height: 19px;
-      color: #1A212F;
+      color: #1a212f;
 
       &--date {
          width: 129px;
@@ -661,13 +676,60 @@ body {
          padding-left: 20px;
 
          font-size: 16px;
-         color: #B5B5B5;
+         color: #b5b5b5;
       }
    }
 
    .button {
       width: 230px;
       margin-top: 30px;
-}
+   }
 }
 
+//Popup after style start ===========
+
+.popup__after {
+   width: 570px;
+   height: 269px;
+
+   display: flex;
+   flex-direction: column;
+   //justify-content: center;
+   align-items: center;
+
+   background-color: #fffefd;
+   box-shadow: 0 0 10px 10px #efe8e2;
+   border-radius: 10px;
+
+   position: relative;
+   overflow: hidden;
+   transition: all 0.8s ease 0s;
+   opacity: 0;
+   transform: perspective(600px) translate(0px, 100%) rotateX(45deg);
+
+   .popup__title {
+      margin-top: 62px;
+      margin-bottom: 14px;
+      text-align: center;
+
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 33px;
+   }
+   .discription {
+      margin-bottom: 46px;
+      font-size: 18px;
+      line-height: 19px;
+      color: #1a212f;
+   }
+   .button--small {
+      width: 122px;
+      height: 50px;
+      padding: 7px 0;
+   }
+   .after__bg {
+      position: absolute;
+      left: -24px;
+      bottom: -23px;
+   }
+}
