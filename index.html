@@ -14,16 +14,34 @@
 <body>
    <div class="wrapper">
       <header class="site-header">
-         <div class="logo"><a href="">
+         <div class="logo">
+            <a href="">
                <img src="img/svg/лого.svg" alt="">
             </a>
          </div>
          <nav class="nav">
+            <div class="logo logo-menu">
+               <a href="#">
+               <img src="img/svg/лого.svg" alt="">
+            </a>
+            <a href="#!" class="menu__close">
+               <img src="./img/svg/close-popup.svg" alt="Close">
+            </a>
+            </div>
             <ul class="nav-list">
                <li class="item"><a href="#features-section">Почему мы?</a></li>
                <li class="item"><a href="#">Номера</a></li>
                <li class="item"><a href="#reviews-section">Отзывы</a></li>
-               <li class="item"><a href="#contacts-section">Как нас найти</a></li>
+               <li class="item item-find"><a href="#contacts-section">Как нас найти</a></li>
+               <li class="item item-contacts">
+                  <a href="#contacts-section">Контакты</a>
+                  <p class="item-contacts__tel">8 (800) 333-55-99</p>
+                  <div class="social">
+                     <a href="#!" class="social-link"><img src="img/svg/icon-fb.svg" alt=""></a>
+                     <a href="#!" class="social-link"><img src="img/svg/icon-ig.svg" alt=""></a>
+                     <a href="#!" class="social-link"><img src="img/svg/icon-vk.svg" alt=""></a>
+                  </div>
+               </li>
             </ul>
          </nav>
          <div class="header__burger burger">
