@@ -308,7 +308,6 @@ body {
             line-height: 19px;
          }
       }
-      
    }
 }
 
@@ -885,16 +884,61 @@ body {
    display: grid;
    grid-template-columns: 300px 870px;
    grid-template-rows: 1fr 912px;
+   position: relative;
+
+   @media (max-width: 900px) {
+      grid-template-columns: 678px;
+      grid-template-rows: 100px 1344px;
+   }
 
    .catalog__title {
       padding: 70px 0 50px 0;
       letter-spacing: -3px;
+
+      @media (max-width: 900px) {
+         position: absolute;
+         top: -40px;
+         left: 0;
+      }
    }
 }
 
 .catalog__select {
    text-align: right;
    font-family: Lato, sans-serif;
+   display: flex;
+   justify-content: flex-end;
+
+   @media (max-width: 900px) {
+      //  align-items: center;
+   }
+
+   .select__filter {
+      display: none;
+      width: 121px;
+      height: 35px;
+      margin: 40px 0 0 0;
+      padding: 0 0 0 20px;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      background-color: #ffffff;
+      background: url(../img/svg/tunnel.svg) no-repeat 16% 50%;
+      box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18);
+      border-radius: 25px;
+      margin-right: 29px;
+      transition: all 0.2s linear;
+      &:hover {
+         background-color: #fac663;
+      }
+
+      @media (max-width: 900px) {
+         display: block;
+      }
+   }
    .select-increase {
       width: 174px;
       height: 35px;
@@ -917,10 +961,30 @@ body {
       option {
          padding: 5px 15px 5px 5px;
       }
+
+      @media (max-width: 900px) {
+         margin-top: 40px;
+      }
    }
 }
 .catalog__filter {
    font-family: Lato, sans-serif;
+
+   @media (max-width: 900px) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      top: 0;
+      left: 0;
+      z-index: 5;
+
+      opacity: 0;
+      visibility: hidden;
+      overflow-y: auto;
+      overflow-x: hidden;
+      transition: all 0.8s ease 0s;
+   }
 }
 .filter__price {
    font-size: 16px;
@@ -1015,6 +1079,10 @@ body {
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: flex-start;
+
+   @media (max-width: 900px) {
+      justify-content: space-between;
+   }
 }
 .room {
    width: 270px;
@@ -1024,7 +1092,14 @@ body {
    border: 1px solid #e1e1e1;
    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
    border-radius: 6px;
-   .room__img {
+
+   @media (max-width: 900px) {
+      width: 324px;
+
+      .room__img img {
+         width: 100%;
+         height: auto;
+      }
    }
 
    .room__body {
@@ -1035,8 +1110,16 @@ body {
       font-size: 14px;
       line-height: 17px;
 
+      @media (max-width: 900px) {
+         padding-top: 10px;
+      }
+
       p {
          margin-bottom: 8px;
+
+         @media (max-width: 900px) {
+            margin-bottom: 5px;
+         }
       }
 
       .room__body-title {
@@ -1077,6 +1160,11 @@ body {
          margin: 19px auto 0 auto;
          width: 230px;
          height: 46px;
+
+         @media (max-width: 900px) {
+            margin-top: 10px;
+            width: 272px;
+         }
          span {
             font-weight: 600;
             font-size: 14px;
@@ -1095,6 +1183,10 @@ body {
 .baner-section {
    margin-top: 118px;
    margin-bottom: 140px;
+   @media (max-width: 900px) {
+      margin-top: 90px;
+      margin-bottom: 120px;
+   }
    .baner {
       height: 379px;
       width: 100%;
@@ -1102,10 +1194,20 @@ body {
       padding-left: 270px;
       background: url(../img/baner2.jpg) no-repeat;
       position: relative;
+
+      @media (max-width: 900px) {
+         width: 678px;
+         height: 359px;
+         padding-left: 50px;
+         background: url(../img/baner-table.jpg) no-repeat;
+      }
       &__img {
          position: absolute;
          left: 0;
          top: 0;
+         @media (max-width: 900px) {
+            width: 20%;
+         }
       }
       .baner__title {
          letter-spacing: -2px;
