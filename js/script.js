@@ -68,6 +68,10 @@ nav.addEventListener('click', function () {
    nav.classList.remove('is-open');
 });
 
+
+
+
+
 //Filter==================
 
 const frmFilter = document.querySelectorAll('.check__input');
@@ -132,4 +136,22 @@ btnDiscard.addEventListener('click', function (e) {
    costTo.value = '600';
 
 })
+
+//Select sorting =================================
+const select = document.forms.slct.square;
+select.onchange = function() {
+if (select.value == 'squareDown' || select.value == 'priceDown') {
+   rooms.forEach((room) => {
+      let priceRoom = room.querySelector('.current-price').textContent;
+      room.style.order = -priceRoom;
+      
+   });
+} else {
+   rooms.forEach((room) => {
+      let priceRoom = room.querySelector('.current-price').textContent;
+      room.style.order = priceRoom;
+      
+   })
+}
+}
 

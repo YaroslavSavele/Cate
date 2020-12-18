@@ -1486,6 +1486,9 @@ body.lock {
   -webkit-box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
           box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
   border-radius: 6px;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
 }
 
 @media (max-width: 900px) {

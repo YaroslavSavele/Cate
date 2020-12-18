@@ -1113,6 +1113,7 @@ body {
    border: 1px solid #e1e1e1;
    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
    border-radius: 6px;
+   order: 0;
 
    @media (max-width: 900px) {
       width: 324px;
