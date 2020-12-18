@@ -877,8 +877,6 @@ body {
 }
 
 //Catalog style start=======================================
-.catalog-section {
-}
 
 .catalog {
    display: grid;
@@ -921,7 +919,7 @@ body {
    justify-content: flex-end;
 
    @media (max-width: 500px) {
-        align-items: flex-start;
+      align-items: flex-start;
    }
 
    .select__filter {
@@ -1059,6 +1057,7 @@ body {
    padding-left: 28px;
    font-size: 14px;
    line-height: 17px;
+   cursor: pointer;
 
    &::before {
       content: "";
@@ -1098,8 +1097,9 @@ body {
 .catalog__rooms {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content: flex-start;
    align-items: flex-start;
+   column-gap: 30px;
 
    @media (max-width: 900px) {
       justify-content: space-between;
@@ -1159,8 +1159,6 @@ body {
          line-height: 24px;
       }
 
-      .room__body-size {
-      }
       .room__body-square {
          letter-spacing: 1px;
       }
@@ -1198,7 +1196,6 @@ body {
             width: 240px;
          }
 
-
          span {
             font-weight: 600;
             font-size: 14px;
@@ -1212,6 +1209,10 @@ body {
          }
       }
    }
+}
+.hidden {
+   display: none;
+   
 }
 //Baner section style =======================================
 .baner-section {
@@ -1301,19 +1302,8 @@ body {
             height: 50px;
             margin: 0 auto;
          }
-}
+      }
    }
-}
-.wrapper {
-}
-
-.title {
-}
-
-.button {
-}
-
-.popup-link {
 }
 
 //Footer style =======================================

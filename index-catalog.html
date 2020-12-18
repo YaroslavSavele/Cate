@@ -71,40 +71,40 @@
                <form action="" name="filter">
                   <label for="" class="filter__price">Цена за сутки, ₽
                      <div class="price__range">
-                        <input type="text" id="priceFrom" placeholder="от 100">
-                        <input type="text" id="priceTo" placeholder="до 600">
+                        <input type="number" id="priceFrom" placeholder="от 100" min="100" value="100">
+                        <input type="number" id="priceTo" placeholder="до 600" max="600" value="600">
                      </div>
                   </label>
                   <div class="filter__square">
                      <h5 class="form-title">Площадь</h5>
 
                      <div class="chekbox">
-                        <input type="checkbox" class="check__input" id="checkbox-1" checked>
+                        <input type="checkbox" class="check__input" id="checkbox-1" checked data-filter="0,63">
                         <label for="checkbox-1" class="check option">0,63 м2</label>
                      </div>
 
                      <div class="chekbox">
-                        <input type="checkbox" class="check__input" id="checkbox-2" checked>
+                        <input type="checkbox" class="check__input" id="checkbox-2" checked data-filter="0,90">
                         <label for="checkbox-2" class="check option">0,90 м2</label>
                      </div>
 
                      <div class="chekbox">
-                        <input type="checkbox" class="check__input" id="checkbox-3" checked>
+                        <input type="checkbox" class="check__input" id="checkbox-3" checked data-filter="1,13">
                         <label for="checkbox-3" class="check option">1,13 м2</label>
                      </div>
 
                      <div class="chekbox">
-                        <input type="checkbox" class="check__input" id="checkbox-4" checked>
+                        <input type="checkbox" class="check__input" id="checkbox-4" checked data-filter="1,56">
                         <label for="checkbox-4" class="check option">1,56 м2</label>
                      </div>
 
                      <div class="chekbox">
-                        <input type="checkbox" class="check__input" id="checkbox-5" checked>
+                        <input type="checkbox" class="check__input" id="checkbox-5" checked data-filter="2,56">
                         <label for="checkbox-5" class="check option">2,56 м2</label>
                      </div>
 
                      <div class="chekbox">
-                        <input type="checkbox" class="check__input" id="checkbox-6" checked>
+                        <input type="checkbox" class="check__input" id="checkbox-6" checked data-filter="2,88">
                         <label for="checkbox-6" class="check option">2,88 м2</label>
                      </div>
 
@@ -113,28 +113,28 @@
                   <div class="filter__equipment">
                      <h5 class="form-title">Оснащение номера</h5>
                      <div class="chekbox">
-                        <input type="checkbox" class="check__input" id="checkbox-7" checked>
+                        <input type="checkbox" class="check__input" id="checkbox-7" checked data-filter="empty">
                         <label for="checkbox-7" class="check option">Пустой номер</label>
                      </div>
 
                      <div class="chekbox">
-                        <input type="checkbox" class="check__input" id="checkbox-8" checked>
+                        <input type="checkbox" class="check__input" id="checkbox-8" checked data-filter="scratching-post">
                         <label for="checkbox-8" class="check option">Лежак</label>
                      </div>
 
                      <div class="chekbox">
-                        <input type="checkbox" class="check__input" id="checkbox-9" checked>
+                        <input type="checkbox" class="check__input" id="checkbox-9" checked data-filter="scratching-post">
                         <label for="checkbox-9" class="check option">Когтеточка</label>
                      </div>
 
                      <div class="chekbox">
-                        <input type="checkbox" class="check__input" id="checkbox-10" checked>
+                        <input type="checkbox" class="check__input" id="checkbox-10" checked data-filter="game-complex">
                         <label for="checkbox-10" class="check option">Игровой комплекс</label>
                      </div>
 
                      <div class="chekbox">
-                        <input type="checkbox" class="check__input" id="checkbox-5" checked>
-                        <label for="checkbox-5" class="check option">Домик</label>
+                        <input type="checkbox" class="check__input" id="checkbox-11" checked data-filter="haus">
+                        <label for="checkbox-11" class="check option">Домик</label>
                      </div>
 
                   </div>
@@ -146,7 +146,7 @@
                </form>
             </div>
             <div class="catalog__rooms">
-               <div class="room">
+               <div class="room" data-filter="empty">
                   <div class="room__img">
                      <img src="./img/cell-1.jpg" alt="">
                   </div>
@@ -154,14 +154,17 @@
                      <h4 class="room__body-title">Эконом</h4>
                      <p class="room__body-size">Размеры (ШхГхВ) - 90х70х180 см</p>
                      <p class="room__body-square">Площадь - <span class="current-square">0,63</span> м2</p>
-                     <p class="room__body-equipment empty">Оснащение номера<span><img src="./img/svg/empty.svg"
-                              alt=""></span></p>
+                     <p class="room__body-equipment empty">Оснащение номера
+                        <span>
+                           <img src="./img/svg/empty.svg" alt="">
+                        </span>
+                     </p>
                      <p class="room__body-price">Цена за сутки: <span class="current-price">100</span>₽</p>
                      <button class="button button--orange popup-link"><span>Забронировать</span> <img
                            src="img/paw-orange.png" alt=""></button>
                   </div>
                </div>
-               <div class="room">
+               <div class="room" data-filter="scratching-post">
                   <div class="room__img">
                      <img src="./img/cell-2.jpg" alt="">
                   </div>
@@ -180,7 +183,7 @@
                            src="img/paw-orange.png" alt=""></button>
                   </div>
                </div>
-               <div class="room">
+               <div class="room" data-filter="game-complex">
                   <div class="room__img">
                      <img src="./img/cell-3.jpg" alt="">
                   </div>
@@ -200,7 +203,7 @@
                            src="img/paw-orange.png" alt=""></button>
                   </div>
                </div>
-               <div class="room">
+               <div class="room" data-filter="game-complex">
                   <div class="room__img">
                      <img src="./img/cell-4.jpg" alt="">
                   </div>
@@ -220,7 +223,7 @@
                            src="img/paw-orange.png" alt=""></button>
                   </div>
                </div>
-               <div class="room">
+               <div class="room" data-filter="haus">
                   <div class="room__img">
                      <img src="./img/cell-5.jpg" alt="">
                   </div>
@@ -241,7 +244,7 @@
                            src="img/paw-orange.png" alt=""></button>
                   </div>
                </div>
-               <div class="room">
+               <div class="room" data-filter="haus">
                   <div class="room__img">
                      <img src="./img/cell-6.jpg" alt="">
                   </div>

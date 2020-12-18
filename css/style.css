@@ -1417,6 +1417,7 @@ body.lock {
   padding-left: 28px;
   font-size: 14px;
   line-height: 17px;
+  cursor: pointer;
 }
 
 .check::before {
@@ -1459,12 +1460,14 @@ body.lock {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
 }
 
 @media (max-width: 900px) {
@@ -1599,6 +1602,10 @@ body.lock {
 .room .room__body .button img {
   width: 34px;
   height: 34px;
+}
+
+.hidden {
+  display: none;
 }
 
 .baner-section {

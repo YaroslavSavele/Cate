@@ -43,6 +43,14 @@ popupClose.addEventListener('click', function (e) {
    bodyCat.classList.remove('lock');
 });
 
+document.addEventListener('keydown', function (e) {
+   if (e.code === 'Escape') {
+      popup.classList.remove('open');
+      bodyCat.classList.remove('lock');
+      popup.classList.remove('open--after');
+   }
+});
+
 btn.addEventListener('click', function (e) {
    e.preventDefault();
    popup.classList.remove('open');
@@ -60,4 +68,68 @@ nav.addEventListener('click', function () {
    nav.classList.remove('is-open');
 });
 
+//Filter==================
+
+const frmFilter = document.querySelectorAll('.check__input');
+const btnApply = document.querySelector('.button--apply');
+const btnDiscard = document.querySelector('.button--discard');
+const rooms = document.querySelectorAll('.room');
+let costFrom = document.getElementById('priceFrom');
+let costTo = document.getElementById('priceTo');
+
+function showDiapazon() {
+   rooms.forEach((room) => {
+      let price = Number(room.querySelector('.current-price').textContent);
+      let from = parseInt(costFrom.value);
+      let to = parseInt(costTo.value);
+      if (price < from || price > to) {
+         room.classList.add('hidden');
+      }
+   })
+}
+
+
+function filterOf(category, items) {
+   items.forEach((item) => {
+      let squareRoom = item.querySelector('.current-square').textContent;
+      let equipmentRoom = item.dataset.filter;
+      if (category === squareRoom || category === equipmentRoom) {
+         item.classList.add('hidden');
+      }
+   });
+}
+
+function filterOn() {
+   rooms.forEach((room) => {
+      room.classList.remove('hidden');
+   })
+}
+
+
+function useFilter() {
+   frmFilter.forEach((check) => {
+      if (check.checked == false) {
+         const currentCategory = check.dataset.filter;
+         filterOf(currentCategory, rooms);
+      }
+   });
+}
+
+
+
+btnApply.addEventListener('click', function (e) {
+   e.preventDefault();
+   filterOn();
+   showDiapazon();
+   useFilter();
+})
+btnDiscard.addEventListener('click', function (e) {
+   e.preventDefault();
+   frmFilter.forEach((check) => {
+      check.checked = true;
+   });
+   costFrom.value = '100';
+   costTo.value = '600';
+
+})
 
