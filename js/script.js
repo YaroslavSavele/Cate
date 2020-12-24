@@ -48,6 +48,7 @@ document.addEventListener('keydown', function (e) {
       popup.classList.remove('open');
       bodyCat.classList.remove('lock');
       popup.classList.remove('open--after');
+      catalogFilter.classList.remove('open');
    }
 });
 
@@ -80,6 +81,21 @@ const btnDiscard = document.querySelector('.button--discard');
 const rooms = document.querySelectorAll('.room');
 let costFrom = document.getElementById('priceFrom');
 let costTo = document.getElementById('priceTo');
+const catalogFilter = document.querySelector('.catalog__filter');
+const btnFilter = document.querySelector('.select__filter');
+const filterClose = document.querySelector('.filter__close');
+
+
+btnFilter.addEventListener('click', () => {
+   catalogFilter.classList.add('open');
+   bodyCat.classList.add('lock');
+});
+
+filterClose.addEventListener('click', function (e) {
+   e.preventDefault();
+   catalogFilter.classList.remove('open');
+   bodyCat.classList.remove('lock');
+});
 
 function showDiapazon() {
    rooms.forEach((room) => {
@@ -126,6 +142,8 @@ btnApply.addEventListener('click', function (e) {
    filterOn();
    showDiapazon();
    useFilter();
+   catalogFilter.classList.remove('open');
+   bodyCat.classList.remove('lock');
 })
 btnDiscard.addEventListener('click', function (e) {
    e.preventDefault();
@@ -154,4 +172,3 @@ if (select.value == 'squareDown' || select.value == 'priceDown') {
    })
 }
 }
-

@@ -68,7 +68,8 @@
                </form>
             </div>
             <div class="catalog__filter">
-               <form action="" name="filter">
+               <form action="" name="filter" class="filter__form">
+                  <a href="#" class="filter__close"><img src="./img/svg/close-popup.svg" alt="Close"></a>
                   <label for="" class="filter__price">Цена за сутки, ₽
                      <div class="price__range">
                         <input type="number" id="priceFrom" placeholder="от 100" min="100" value="100">
@@ -118,12 +119,14 @@
                      </div>
 
                      <div class="chekbox">
-                        <input type="checkbox" class="check__input" id="checkbox-8" checked data-filter="scratching-post">
+                        <input type="checkbox" class="check__input" id="checkbox-8" checked
+                           data-filter="scratching-post">
                         <label for="checkbox-8" class="check option">Лежак</label>
                      </div>
 
                      <div class="chekbox">
-                        <input type="checkbox" class="check__input" id="checkbox-9" checked data-filter="scratching-post">
+                        <input type="checkbox" class="check__input" id="checkbox-9" checked
+                           data-filter="scratching-post">
                         <label for="checkbox-9" class="check option">Когтеточка</label>
                      </div>
 
@@ -154,11 +157,12 @@
                      <h4 class="room__body-title">Эконом</h4>
                      <p class="room__body-size">Размеры (ШхГхВ) - 90х70х180 см</p>
                      <p class="room__body-square">Площадь - <span class="current-square">0,63</span> м2</p>
-                     <p class="room__body-equipment empty">Оснащение номера
-                        <span>
-                           <img src="./img/svg/empty.svg" alt="">
-                        </span>
-                     </p>
+                     <div class="room__body-equipment">
+                        <span>Оснащение номера</span>
+                        <div class="equipment equipment--empty">
+                           <div class="prompt promt__empty">Пустой номер</div>
+                        </div>
+                     </div>
                      <p class="room__body-price">Цена за сутки: <span class="current-price">100</span>₽</p>
                      <button class="button button--orange popup-link"><span>Забронировать</span> <img
                            src="img/paw-orange.png" alt=""></button>
@@ -172,12 +176,15 @@
                      <h4 class="room__body-title">Эконом плюс</h4>
                      <p class="room__body-size">Размеры (ШхГхВ) - 90х100х180 см</p>
                      <p class="room__body-square">Площадь - <span class="current-square">0,90</span> м2</p>
-                     <p class="room__body-equipment empty">Оснащение номера
-                        <span>
-                           <img src="./img/svg/bed.svg" alt="">
-                           <img src="./img/svg/scratching-post.svg" alt="">
-                        </span>
-                     </p>
+                     <div class="room__body-equipment">
+                        <span>Оснащение номера</span>
+                        <div class="equipment equipment--bed">
+                           <div class="prompt promt__bed">Лежак</div>
+                        </div>
+                        <div class="equipment equipment--stratching">
+                           <div class="prompt promt__stratching">Когтеточка</div>
+                        </div>
+                     </div>
                      <p class="room__body-price">Цена за сутки: <span class="current-price">200</span>₽</p>
                      <button class="button button--orange popup-link"><span>Забронировать</span> <img
                            src="img/paw-orange.png" alt=""></button>
@@ -191,13 +198,18 @@
                      <h4 class="room__body-title">Комфорт</h4>
                      <p class="room__body-size">Размеры (ШхГхВ) - 100х125х180 см</p>
                      <p class="room__body-square">Площадь - <span class="current-square">1,13</span> м2</p>
-                     <p class="room__body-equipment empty">Оснащение номера
-                        <span>
-                           <img src="./img/svg/bed.svg" alt="">
-                           <img src="./img/svg/scratching-post.svg" alt="">
-                           <img src="./img/svg/game-complex.svg" alt="">
-                        </span>
-                     </p>
+                     <div class="room__body-equipment">
+                        <span>Оснащение номера</span>
+                        <div class="equipment equipment--bed">
+                           <div class="prompt promt__bed">Лежак</div>
+                        </div>
+                        <div class="equipment equipment--stratching">
+                           <div class="prompt promt__stratching">Когтеточка</div>
+                        </div>
+                        <div class="equipment equipment--game">
+                           <div class="prompt promt__game">Игровой комплекс</div>
+                        </div>
+                     </div>
                      <p class="room__body-price">Цена за сутки: <span class="current-price">250</span>₽</p>
                      <button class="button button--orange popup-link"><span>Забронировать</span> <img
                            src="img/paw-orange.png" alt=""></button>
@@ -211,13 +223,18 @@
                      <h4 class="room__body-title">Сьют</h4>
                      <p class="room__body-size">Размеры (ШхГхВ) - 125х125х180 см</p>
                      <p class="room__body-square">Площадь - <span class="current-square">1,56</span> м2</p>
-                     <p class="room__body-equipment empty">Оснащение номера
-                        <span>
-                           <img src="./img/svg/bed.svg" alt="">
-                           <img src="./img/svg/scratching-post.svg" alt="">
-                           <img src="./img/svg/game-complex.svg" alt="">
-                        </span>
-                     </p>
+                     <div class="room__body-equipment">
+                        <span>Оснащение номера</span>
+                        <div class="equipment equipment--bed">
+                           <div class="prompt promt__bed">Лежак</div>
+                        </div>
+                        <div class="equipment equipment--stratching">
+                           <div class="prompt promt__stratching">Когтеточка</div>
+                        </div>
+                        <div class="equipment equipment--game">
+                           <div class="prompt promt__game">Игровой комплекс</div>
+                        </div>
+                     </div>
                      <p class="room__body-price">Цена за сутки: <span class="current-price">350</span>₽</p>
                      <button class="button button--orange popup-link"><span>Забронировать</span> <img
                            src="img/paw-orange.png" alt=""></button>
@@ -231,14 +248,21 @@
                      <h4 class="room__body-title">Люкс</h4>
                      <p class="room__body-size">Размеры (ШхГхВ) - 160х160х180 см</p>
                      <p class="room__body-square">Площадь - <span class="current-square">2,56</span> м2</p>
-                     <p class="room__body-equipment empty">Оснащение номера
-                        <span>
-                           <img src="./img/svg/bed.svg" alt="">
-                           <img src="./img/svg/scratching-post.svg" alt="">
-                           <img src="./img/svg/game-complex.svg" alt="">
-                           <img src="./img/svg/haus.svg" alt="">
-                        </span>
-                     </p>
+                     <div class="room__body-equipment">
+                        <span>Оснащение номера</span>
+                        <div class="equipment equipment--bed">
+                           <div class="prompt promt__bed">Лежак</div>
+                        </div>
+                        <div class="equipment equipment--stratching">
+                           <div class="prompt promt__stratching">Когтеточка</div>
+                        </div>
+                        <div class="equipment equipment--game">
+                           <div class="prompt promt__game">Игровой комплекс</div>
+                        </div>
+                        <div class="equipment equipment--house">
+                           <div class="prompt promt__house">Домик</div>
+                        </div>
+                     </div>
                      <p class="room__body-price">Цена за сутки: <span class="current-price">500</span>₽</p>
                      <button class="button button--orange popup-link"><span>Забронировать</span> <img
                            src="img/paw-orange.png" alt=""></button>
@@ -252,14 +276,21 @@
                      <h4 class="room__body-title">Супер-Люкс</h4>
                      <p class="room__body-size">Размеры (ШхГхВ) - 180х160х180 см</p>
                      <p class="room__body-square">Площадь - <span class="current-square">2,88</span> м2</p>
-                     <p class="room__body-equipment empty">Оснащение номера
-                        <span>
-                           <img src="./img/svg/bed.svg" alt="">
-                           <img src="./img/svg/scratching-post.svg" alt="">
-                           <img src="./img/svg/game-complex.svg" alt="">
-                           <img src="./img/svg/haus.svg" alt="">
-                        </span>
-                     </p>
+                     <div class="room__body-equipment">
+                        <span>Оснащение номера</span>
+                        <div class="equipment equipment--bed">
+                           <div class="prompt promt__bed">Лежак</div>
+                        </div>
+                        <div class="equipment equipment--stratching">
+                           <div class="prompt promt__stratching">Когтеточка</div>
+                        </div>
+                        <div class="equipment equipment--game">
+                           <div class="prompt promt__game">Игровой комплекс</div>
+                        </div>
+                        <div class="equipment equipment--house">
+                           <div class="prompt promt__house">Домик</div>
+                        </div>
+                     </div>
                      <p class="room__body-price">Цена за сутки: <span class="current-price">600</span>₽</p>
                      <button class="button button--orange popup-link"><span>Забронировать</span> <img
                            src="img/paw-orange.png" alt=""></button>

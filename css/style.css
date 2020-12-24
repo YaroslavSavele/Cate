@@ -1199,8 +1199,8 @@ body.lock {
   .catalog {
     -ms-grid-columns: 678px;
         grid-template-columns: 678px;
-    -ms-grid-rows: 100px 1344px;
-        grid-template-rows: 100px 1344px;
+    -ms-grid-rows: 100px 100%;
+        grid-template-rows: 100px 100%;
   }
 }
 
@@ -1208,8 +1208,8 @@ body.lock {
   .catalog {
     -ms-grid-columns: 290px;
         grid-template-columns: 290px;
-    -ms-grid-rows: 100px 70px 2748px;
-        grid-template-rows: 100px 70px 2748px;
+    -ms-grid-rows: 100px 70px 100%;
+        grid-template-rows: 100px 70px 100%;
   }
 }
 
@@ -1335,6 +1335,10 @@ body.lock {
   font-family: Lato, sans-serif;
 }
 
+.catalog__filter .filter__form .filter__close {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .catalog__filter {
     position: fixed;
@@ -1350,6 +1354,51 @@ body.lock {
     overflow-x: hidden;
     -webkit-transition: all 0.8s ease 0s;
     transition: all 0.8s ease 0s;
+  }
+  .catalog__filter.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .catalog__filter.open .filter__form {
+    opacity: 1;
+    -webkit-transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+            transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+  }
+  .catalog__filter .filter__form {
+    width: 332px;
+    height: 825px;
+    margin: 136px auto;
+    background: #fffefd;
+    -webkit-box-shadow: 0px 4px 25px rgba(153, 153, 153, 0.25);
+            box-shadow: 0px 4px 25px rgba(153, 153, 153, 0.25);
+    border-radius: 6px;
+    padding-top: 50px;
+    padding-left: 60px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+            transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+  }
+  .catalog__filter .filter__form .filter__close {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+  .catalog__filter .filter__form .filter__close img {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 900px) and (max-width: 500px) {
+  .catalog__filter .filter__form {
+    width: 290px;
+    margin-top: 102px;
+    padding-left: 25px;
   }
 }
 
@@ -1455,6 +1504,7 @@ body.lock {
 }
 
 .catalog__rooms {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1472,9 +1522,20 @@ body.lock {
 
 @media (max-width: 900px) {
   .catalog__rooms {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .catalog__rooms {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 30px;
   }
 }
 
@@ -1557,11 +1618,16 @@ body.lock {
 }
 
 .room .room__body .room__body-equipment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 6px;
   letter-spacing: 1px;
 }
 
 .room .room__body .room__body-equipment img {
   margin-left: 5px;
+  cursor: pointer;
 }
 
 .room .room__body .room__body-price {
@@ -1605,6 +1671,168 @@ body.lock {
 .room .room__body .button img {
   width: 34px;
   height: 34px;
+}
+
+.equipment {
+  width: 21px;
+  height: 17px;
+  position: relative;
+  margin-left: 9px;
+}
+
+.equipment--empty {
+  background: url(../img/svg/empty.svg) no-repeat;
+}
+
+.equipment--bed {
+  background: url(../img/svg/bed.svg) no-repeat;
+}
+
+.equipment--stratching {
+  background: url(../img/svg/scratching-post.svg) no-repeat;
+  margin-left: 3px;
+}
+
+.equipment--game {
+  background: url(../img/svg/game-complex.svg) no-repeat;
+  margin-left: 1px;
+}
+
+.equipment--house {
+  background: url(../img/svg/haus.svg) no-repeat;
+  margin-left: 1px;
+}
+
+.prompt {
+  position: absolute;
+  top: -46px;
+  width: 99px;
+  height: 28px;
+  padding: 5px;
+  text-align: center;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  background-color: #ffffff;
+  border: 1px solid #fac663;
+  -webkit-box-shadow: 0px 4px 12px rgba(173, 152, 143, 0.18);
+          box-shadow: 0px 4px 12px rgba(173, 152, 143, 0.18);
+  border-radius: 6px;
+  opacity: 0;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.promt__empty {
+  left: -23px;
+}
+
+.promt__empty::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 24px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 2;
+  border-right: 1px solid #fac663;
+  border-bottom: 1px solid #fac663;
+}
+
+.equipment:hover .promt__empty,
+.equipment:hover .promt__bed,
+.equipment:hover .promt__stratching,
+.equipment:hover .promt__game,
+.equipment:hover .promt__house {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.promt__bed {
+  left: -23px;
+  width: 59px;
+}
+
+.promt__bed::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 24px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 2;
+  border-right: 1px solid #fac663;
+  border-bottom: 1px solid #fac663;
+}
+
+.promt__stratching {
+  left: -23px;
+}
+
+.promt__stratching::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 24px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 2;
+  border-right: 1px solid #fac663;
+  border-bottom: 1px solid #fac663;
+}
+
+.promt__game {
+  left: -72px;
+  width: 125px;
+}
+
+.promt__game::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 72px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 2;
+  border-right: 1px solid #fac663;
+  border-bottom: 1px solid #fac663;
+}
+
+.promt__house {
+  left: -27px;
+  width: 59px;
+}
+
+.promt__house::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 29px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 2;
+  border-right: 1px solid #fac663;
+  border-bottom: 1px solid #fac663;
 }
 
 .hidden {
