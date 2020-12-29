@@ -1954,6 +1954,103 @@ body.lock {
   }
 }
 
+.superlux-section {
+  margin-top: 15px;
+}
+
+@media (min-width: 1200px) {
+  .superlux-section {
+    background: url(../img/paw-superlux.png) no-repeat 100% -25%;
+  }
+}
+
+.card-room {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70px 500px 10px 500px;
+      grid-template-columns: 70px 500px 10px 500px;
+  -ms-grid-rows: 451px;
+      grid-template-rows: 451px;
+  gap: 30px;
+}
+
+.card-room__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+  padding-top: 55px;
+}
+
+.card-room__slider {
+  width: 500px;
+  height: 451px;
+  padding-top: 32px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card-room__discription {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  padding-top: 55px;
+  border-top: 1px solid #c4c4c4;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card-room__discription .title {
+  margin-bottom: 30px;
+}
+
+.card-room__discription .room__body-size {
+  margin-bottom: 20px;
+}
+
+.card-room__discription .room__body-square {
+  margin-bottom: 20px;
+}
+
+.card-room__discription .room__body-equipment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.card-room__discription .room__body-equipment .equipment {
+  width: 100%;
+  padding-left: 25px;
+  background-position: 0%;
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+.card-room__discription .room__body-equipment .equipment--bed {
+  margin-top: 10px;
+}
+
+.card-room__discription .room__body-price {
+  margin-bottom: 20px;
+}
+
+.card-room__discription .room__body-price .current-price {
+  margin-left: 5px;
+  font-weight: 500;
+}
+
 .site-footer .container {
   border-top: 1px solid #efefef;
 }

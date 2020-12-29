@@ -1224,7 +1224,6 @@ body {
       }
       .room__body-equipment {
          display: flex;
-         //align-items: center;
          margin-bottom: 6px;
          letter-spacing: 1px;
 
@@ -1278,8 +1277,8 @@ body {
    margin-left: 9px;
 
    &--empty {
-   background: url(../img/svg/empty.svg) no-repeat;
-}
+      background: url(../img/svg/empty.svg) no-repeat;
+   }
    &--bed {
       background: url(../img/svg/bed.svg) no-repeat;
    }
@@ -1315,11 +1314,10 @@ body {
    opacity: 0;
    transition: all 0.6s;
    transform: scale(0);
-
 }
 .promt__empty {
    left: -23px;
-   
+
    &::after {
       content: "";
       position: absolute;
@@ -1345,7 +1343,7 @@ body {
 .promt__bed {
    left: -23px;
    width: 59px;
-   
+
    &::after {
       content: "";
       position: absolute;
@@ -1361,10 +1359,9 @@ body {
    }
 }
 
-
 .promt__stratching {
    left: -23px;
-   
+
    &::after {
       content: "";
       position: absolute;
@@ -1382,7 +1379,7 @@ body {
 .promt__game {
    left: -72px;
    width: 125px;
-   
+
    &::after {
       content: "";
       position: absolute;
@@ -1400,7 +1397,7 @@ body {
 .promt__house {
    left: -27px;
    width: 59px;
-   
+
    &::after {
       content: "";
       position: absolute;
@@ -1416,10 +1413,11 @@ body {
    }
 }
 
-
 .hidden {
    display: none;
 }
+//Catalog style end=======================================
+
 //Baner section style =======================================
 .baner-section {
    margin-top: 118px;
@@ -1510,6 +1508,117 @@ body {
          }
       }
    }
+}
+//Baner section style end=======================================
+
+//Super lux section style  start=======================================
+.superlux-section {
+   margin-top: 15px;
+
+   @media (min-width: 1200px) {
+      background: url(../img/paw-superlux.png) no-repeat 100% -25%;
+   }
+}
+.wrapper {
+}
+.card-room {
+   display: grid;
+   grid-template-columns: 70px 500px 10px 500px;
+   grid-template-rows: 451px;
+   gap: 30px;
+}
+.card-room__btn {
+   display: flex;
+   flex-direction: column;
+   row-gap: 30px;
+   padding-top: 55px;
+}
+.btn__slider {
+}
+.btn__slider--one {
+}
+.btn__slider--two {
+}
+.btn__slider--three {
+}
+.card-room__slider {
+   width: 500px;
+   height: 451px;
+   padding-top: 32px;
+   overflow: hidden;
+   border-radius: 8px;
+
+   img {
+      //height: 100%;
+   }
+}
+.item-initial {
+}
+.item-one {
+}
+.card-room__discription {
+   grid-column: 4 / 5;
+   padding-top: 55px;
+   border-top: 1px solid #c4c4c4;
+   font-family: Lato;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 19px;
+
+   .title {
+      margin-bottom: 30px;
+   }
+   .room__body-size {
+      margin-bottom: 20px;
+   }
+   .room__body-square {
+      margin-bottom: 20px;
+   }
+   .room__body-equipment {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      .equipment {
+         width: 100%;
+         padding-left: 25px;
+         background-position: 0%;
+         margin-left: 0;
+         margin-bottom: 10px;
+      }
+      .equipment--bed {
+         margin-top: 10px;
+      }
+   }
+
+   .room__body-price {
+      margin-bottom: 20px;
+
+      .current-price {
+         margin-left: 5px;
+         font-weight: 500;
+      }
+   }
+}
+
+.current-square {
+}
+
+.equipment--stratching {
+}
+.equipment--game {
+}
+.equipment--house {
+}
+.room__body-price {
+}
+
+.button {
+}
+.button--orange {
+}
+.popup-link {
 }
 
 //Footer style =======================================
