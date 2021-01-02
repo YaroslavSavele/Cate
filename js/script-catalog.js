@@ -1,73 +1,73 @@
-$(document).ready(function () {
-   $('.slider').slick({
-      dots: true,
-   });
-});
+//$(document).ready(function () {
+//   $('.slider').slick({
+//      dots: true,
+//   });
+//});
 
-$(document).ready(function () {
-   $('.reviews__slider').slick({
-      dots: true,
-      slidesToShow: 3,
-      centerMode: false,
-      variableWidth: true,
-   });
-});
+//$(document).ready(function () {
+//   $('.reviews__slider').slick({
+//      dots: true,
+//      slidesToShow: 3,
+//      centerMode: false,
+//      variableWidth: true,
+//   });
+//});
 
-const popupLinks = document.querySelectorAll('.popup-link');
-const popup = document.querySelector('.popup');
-const popupClose = document.querySelector('.popup__close');
-const bodyCat = document.querySelector('body');
-const btn = document.querySelector('.popup__content .button');
-const btnSmall = document.querySelector('.popup__after .button');
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav');
+//const popupLinks = document.querySelectorAll('.popup-link');
+//const popup = document.querySelector('.popup');
+//const popupClose = document.querySelector('.popup__close');
+//const bodyCat = document.querySelector('body');
+//const btn = document.querySelector('.popup__content .button');
+//const btnSmall = document.querySelector('.popup__after .button');
+//const burger = document.querySelector('.burger');
+//const nav = document.querySelector('.nav');
 
 
-const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll('.lock-padding');
+//const body = document.querySelector('body');
+//const lockPadding = document.querySelectorAll('.lock-padding');
 
-let unlock = true;
+//let unlock = true;
 
-const timeout = 800;
+//const timeout = 800;
 
-popupLinks.forEach((link) => {
-   link.addEventListener('click', function () {
-      popup.classList.add('open');
-      bodyCat.classList.add('lock');
-   });
-});
+//popupLinks.forEach((link) => {
+//   link.addEventListener('click', function () {
+//      popup.classList.add('open');
+//      bodyCat.classList.add('lock');
+//   });
+//});
 
-popupClose.addEventListener('click', function (e) {
-   e.preventDefault();
-   popup.classList.remove('open');
-   bodyCat.classList.remove('lock');
-});
+//popupClose.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   popup.classList.remove('open');
+//   bodyCat.classList.remove('lock');
+//});
 
-document.addEventListener('keydown', function (e) {
-   if (e.code === 'Escape') {
-      popup.classList.remove('open');
-      bodyCat.classList.remove('lock');
-      popup.classList.remove('open--after');
-      catalogFilter.classList.remove('open');
-   }
-});
+//document.addEventListener('keydown', function (e) {
+//   if (e.code === 'Escape') {
+//      popup.classList.remove('open');
+//      bodyCat.classList.remove('lock');
+//      popup.classList.remove('open--after');
+//      catalogFilter.classList.remove('open');
+//   }
+//});
 
-btn.addEventListener('click', function (e) {
-   e.preventDefault();
-   popup.classList.remove('open');
-   popup.classList.add('open--after');
-});
-btnSmall.addEventListener('click', function () {
-   popup.classList.remove('open--after');
-   bodyCat.classList.remove('lock');
-});
+//btn.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   popup.classList.remove('open');
+//   popup.classList.add('open--after');
+//});
+//btnSmall.addEventListener('click', function () {
+//   popup.classList.remove('open--after');
+//   bodyCat.classList.remove('lock');
+//});
 
-burger.addEventListener('click', function () {
-   nav.classList.add('is-open');
-});
-nav.addEventListener('click', function () {
-   nav.classList.remove('is-open');
-});
+//burger.addEventListener('click', function () {
+//   nav.classList.add('is-open');
+//});
+//nav.addEventListener('click', function () {
+//   nav.classList.remove('is-open');
+//});
 
 
 
@@ -174,22 +174,22 @@ if (select.value == 'squareDown' || select.value == 'priceDown') {
 }
 // Slider pictures in Superlux room
 
-const btnPreviews = document.querySelectorAll('.button btn__slider');
-const pictures = document.querySelectorAll('.card-room__slider');
+//const btnPreviews = document.querySelectorAll('.button btn__slider');
+//const pictures = document.querySelectorAll('.card-room__slider');
 
-function hide () {
-   pictures.forEach((picture)  => {
-      picture.classList.add('hidden');
-   })
-}
+//function hide () {
+//   pictures.forEach((picture)  => {
+//      picture.classList.add('hidden');
+//   })
+//}
 
-btnPreviews.forEach((btn) => {
-   btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      hide();
-      console.log('hello');
-      let index = btnPreviews.indexOf(btn) + 1;
-      pictures[index].classList.remove('hidden');
+//btnPreviews.forEach((btn) => {
+//   btn.addEventListener('click', function(e) {
+//      e.preventDefault();
+//      hide();
+//      console.log('hello');
+//      let index = btnPreviews.indexOf(btn) + 1;
+//      pictures[index].classList.remove('hidden');
 
-   })
-})
+//   })
+//})

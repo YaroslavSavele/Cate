@@ -75,121 +75,121 @@ nav.addEventListener('click', function () {
 
 //Filter==================
 
-const frmFilter = document.querySelectorAll('.check__input');
-const btnApply = document.querySelector('.button--apply');
-const btnDiscard = document.querySelector('.button--discard');
-const rooms = document.querySelectorAll('.room');
-let costFrom = document.getElementById('priceFrom');
-let costTo = document.getElementById('priceTo');
-const catalogFilter = document.querySelector('.catalog__filter');
-const btnFilter = document.querySelector('.select__filter');
-const filterClose = document.querySelector('.filter__close');
+//const frmFilter = document.querySelectorAll('.check__input');
+//const btnApply = document.querySelector('.button--apply');
+//const btnDiscard = document.querySelector('.button--discard');
+//const rooms = document.querySelectorAll('.room');
+//let costFrom = document.getElementById('priceFrom');
+//let costTo = document.getElementById('priceTo');
+//const catalogFilter = document.querySelector('.catalog__filter');
+//const btnFilter = document.querySelector('.select__filter');
+//const filterClose = document.querySelector('.filter__close');
 
 
-btnFilter.addEventListener('click', () => {
-   catalogFilter.classList.add('open');
-   bodyCat.classList.add('lock');
-});
+//btnFilter.addEventListener('click', () => {
+//   catalogFilter.classList.add('open');
+//   bodyCat.classList.add('lock');
+//});
 
-filterClose.addEventListener('click', function (e) {
-   e.preventDefault();
-   catalogFilter.classList.remove('open');
-   bodyCat.classList.remove('lock');
-});
+//filterClose.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   catalogFilter.classList.remove('open');
+//   bodyCat.classList.remove('lock');
+//});
 
-function showDiapazon() {
-   rooms.forEach((room) => {
-      let price = Number(room.querySelector('.current-price').textContent);
-      let from = parseInt(costFrom.value);
-      let to = parseInt(costTo.value);
-      if (price < from || price > to) {
-         room.classList.add('hidden');
-      }
-   })
-}
-
-
-function filterOf(category, items) {
-   items.forEach((item) => {
-      let squareRoom = item.querySelector('.current-square').textContent;
-      let equipmentRoom = item.dataset.filter;
-      if (category === squareRoom || category === equipmentRoom) {
-         item.classList.add('hidden');
-      }
-   });
-}
-
-function filterOn() {
-   rooms.forEach((room) => {
-      room.classList.remove('hidden');
-   })
-}
+//function showDiapazon() {
+//   rooms.forEach((room) => {
+//      let price = Number(room.querySelector('.current-price').textContent);
+//      let from = parseInt(costFrom.value);
+//      let to = parseInt(costTo.value);
+//      if (price < from || price > to) {
+//         room.classList.add('hidden');
+//      }
+//   })
+//}
 
 
-function useFilter() {
-   frmFilter.forEach((check) => {
-      if (check.checked == false) {
-         const currentCategory = check.dataset.filter;
-         filterOf(currentCategory, rooms);
-      }
-   });
-}
+//function filterOf(category, items) {
+//   items.forEach((item) => {
+//      let squareRoom = item.querySelector('.current-square').textContent;
+//      let equipmentRoom = item.dataset.filter;
+//      if (category === squareRoom || category === equipmentRoom) {
+//         item.classList.add('hidden');
+//      }
+//   });
+//}
+
+//function filterOn() {
+//   rooms.forEach((room) => {
+//      room.classList.remove('hidden');
+//   })
+//}
+
+
+//function useFilter() {
+//   frmFilter.forEach((check) => {
+//      if (check.checked == false) {
+//         const currentCategory = check.dataset.filter;
+//         filterOf(currentCategory, rooms);
+//      }
+//   });
+//}
 
 
 
-btnApply.addEventListener('click', function (e) {
-   e.preventDefault();
-   filterOn();
-   showDiapazon();
-   useFilter();
-   catalogFilter.classList.remove('open');
-   bodyCat.classList.remove('lock');
-})
-btnDiscard.addEventListener('click', function (e) {
-   e.preventDefault();
-   frmFilter.forEach((check) => {
-      check.checked = true;
-   });
-   costFrom.value = '100';
-   costTo.value = '600';
+//btnApply.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   filterOn();
+//   showDiapazon();
+//   useFilter();
+//   catalogFilter.classList.remove('open');
+//   bodyCat.classList.remove('lock');
+//})
+//btnDiscard.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   frmFilter.forEach((check) => {
+//      check.checked = true;
+//   });
+//   costFrom.value = '100';
+//   costTo.value = '600';
 
-})
+//})
 
-//Select sorting =================================
-const select = document.forms.slct.square;
-select.onchange = function() {
-if (select.value == 'squareDown' || select.value == 'priceDown') {
-   rooms.forEach((room) => {
-      let priceRoom = room.querySelector('.current-price').textContent;
-      room.style.order = -priceRoom;
+////Select sorting =================================
+//const select = document.forms.slct.square;
+//select.onchange = function() {
+//if (select.value == 'squareDown' || select.value == 'priceDown') {
+//   rooms.forEach((room) => {
+//      let priceRoom = room.querySelector('.current-price').textContent;
+//      room.style.order = -priceRoom;
       
-   });
-} else {
-   rooms.forEach((room) => {
-      let priceRoom = room.querySelector('.current-price').textContent;
-      room.style.order = priceRoom;
+//   });
+//} else {
+//   rooms.forEach((room) => {
+//      let priceRoom = room.querySelector('.current-price').textContent;
+//      room.style.order = priceRoom;
       
-   })
-}
-}
+//   })
+//}
+//}
 // Slider pictures in Superlux room
 
-const btnPreviews = document.querySelectorAll('.button btn__slider');
-const pictures = document.querySelectorAll('.card-room__slider');
+//const btnPreviews = document.querySelectorAll('.button btn__slider');
+//const pictures = document.querySelectorAll('.card-room__slider');
 
-function hide () {
-   pictures.forEach((picture)  => {
-      picture.classList.add('hidden');
-   })
-}
+//function hide () {
+//   pictures.forEach((picture)  => {
+//      picture.classList.add('hidden');
+//   })
+//}
 
-btnPreviews.forEach((btn) => {
-   btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      hide();
-      console.log('hello');
-      let index = btnPreviews.indexOf(btn) + 1;
-      pictures[index].classList.remove('hidden');
+//btnPreviews.forEach((btn) => {
+//   btn.addEventListener('click', function(e) {
+//      e.preventDefault();
+//      hide();
+//      console.log('hello');
+//      let index = btnPreviews.indexOf(btn) + 1;
+//      pictures[index].classList.remove('hidden');
 
-   })
-})
+//   })
+//})

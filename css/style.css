@@ -466,6 +466,13 @@ body.lock {
   }
 }
 
+@media (max-width: 900px) {
+  .hero-section .button--white {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media (max-width: 500px) {
   .features-section {
     height: 100%;
@@ -2076,6 +2083,11 @@ body.lock {
     width: 100%;
     height: 100%;
   }
+}
+
+.card-room__slider .card-room__item img {
+  width: 100%;
+  height: 100%;
 }
 
 .card-room__discription {
